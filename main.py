@@ -38,13 +38,9 @@ def front(window1):
     combobox = ttk.Combobox(state="readonly")
     combobox['value'] = ('Boston Boots', 'New York Americans', 'Seattle Sailors')
     combobox.place(x=50, y=150)
-    img = PhotoImage(file="baseball.gif")
-    canvas = Canvas(window, width=200, height=155, bg="black")
-    canvas.create_image(5, 5, anchor=NW, image=img)
     btn.bind("<Button>", lambda e: back(lbl, combobox))
     btnabt.bind("<Button>", lambda e: about())
     btn.pack
-    canvas.place(relx=0.83, rely=0.8, anchor=CENTER)
     window1.mainloop()
 
 
